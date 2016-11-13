@@ -1,0 +1,883 @@
+/*reset*/
+* {      
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;  
+}
+button:focus{
+  outline: none;
+}
+a{
+  text-decoration: none;
+}
+a:focus{
+  outline: none;
+}
+
+/*styles*/
+
+/* ------------------------------------------------- Base style --------------------------------------------------*/
+.main-content{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;   
+}
+
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+    width: 100%;
+}
+@font-face{
+    font-family: Raleway;
+    src: url(../Fonts/Raleway-Regular.ttf) format('truetype');
+}
+@font-face{
+    font-family: Montserrat;
+    src: url('../Fonts/Montserrat-Regular.eot?') ,
+         url(../Fonts/Montserrat-Regular.ttf) format('truetype');
+}
+@media only screen and (max-width: 1024px) {  
+    #hidden-menu-icon{display: block;}
+    .logo{float: none;width: 200px; margin: auto;}
+  
+  
+    #menu-BG .menu{display: none;}  
+    
+}
+
+
+@media only screen and (min-width: 500px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+}
+@media only screen and (min-width: 800px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%}
+}
+
+/*--------------------------------------------------------------------------------------------- Header -----------------------------------------------------------------------------------------*/
+#header{
+    background-image: url('../Image/header-BG.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 1024px;
+}
+#menu-background{
+        
+    padding: 40px 30px 20px 30px;
+    margin-bottom: 100px;
+}
+#header-menu{  
+  padding: 15px;
+  width: 100%;
+    
+  z-index: 3;
+
+}
+#header-menu div:nth-child(1){
+  display: inline-block;
+}
+
+
+/*----------------------------------------------------- Logo ------------------------------------------------------*/
+.logo{
+  float: left;
+  width: 200px;
+  margin: auto;
+
+}
+.logo img{
+    vertical-align: middle;
+}
+.logo h1{
+  font-size: 34px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: right;
+}
+.logo div{
+  display: inline-block;
+}
+
+
+/*----------------------------------------------------- Menu ------------------------------------------------------*/
+#hidden-menu-icon{
+  display: none;
+  position: fixed;
+  left: 20px;
+  top:60px;
+  z-index: 5;
+ 
+  top: 8px;
+}
+#hidden-menu-icon a{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 40px;
+  color: #000000;
+}
+
+#hidden-menu{ 
+  position: fixed;
+  padding: 20px;
+  width: 320px;
+  height: 100%;
+  background-color:#998675;
+  z-index: 10;
+  left: -330px;
+  -webkit-transition: -webkit-transform 1s; /* Safari */
+    transition: transform 1s;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.45);
+}
+#hidden-menu .logo{
+  margin: 0px!important;
+}
+#close-hidden-menu{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+  position: relative;
+  left: 260px;
+  top:-45px;
+  color: #000000;
+}
+
+
+
+#hidden-menu .menu{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    display: inline-block;
+    padding-left: 50px;
+     
+    color: #363636;
+    font-weight: 400;
+    font-size: 18px;
+}
+#hidden-menu .menu li {
+  padding: 5px;
+}
+#hidden-menu .menu li a{
+  display: block;   
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+}
+
+
+
+
+/*----------------------------------------------------- Menu -----------------------------------------------------*/
+#menu-BG{
+  float: right;
+  padding-top: 18px;  
+  
+}
+#menu-BG .menu{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    margin: auto;   
+   
+    color: #898989;
+
+}
+#menu-BG .menu li {
+    list-style-type: none;
+   margin: 0px 15px 0px 15px;
+   float: left    
+}
+#menu-BG .menu li a{
+    display: block;   
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left; 
+}
+
+
+#menu-BG .menu li a img{
+    display: block;
+    position: relative;
+    top: -4px;
+}
+
+.menu li:last-child{
+    margin-right: 0px;
+}
+.menu li:first-child{
+    margin-left:0px; 
+}
+
+
+
+
+
+/*----------------------------------------------------- Slider ------------------------------------------------------*/
+#slider{
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+
+}
+#wraper{
+    width: 500%; /*** 100% * slides_count **/
+    height: 550px;
+    -webkit-transition:  -webkit-transform 2s; 
+    transition:  transform 2s;
+
+}
+
+.slider-block{
+    width: 20%;/*** 100% /slides_count **/
+    height: 100%;
+    float: left;
+    
+    padding-top: 100px;
+}
+.slider-block div{
+  max-width: 600px;
+  margin: auto; 
+}
+
+/*************** Styles slide 1 *************/
+#wraper div:nth-child(1){
+    
+}
+/*************** Styles slide 2 *************/
+#wraper div:nth-child(2){
+   
+}
+/*************** Styles slide 3 *************/
+#wraper div:nth-child(3){
+    
+}
+/*************** Styles slide 4 *************/
+#wraper div:nth-child(4){
+   
+}
+/*************** Styles slide 5 *************/
+#wraper div:nth-child(5){
+   
+}
+
+#wraper .slider-block h2{
+  font-size: 36px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;  
+}
+#wraper .slider-block h1{
+  font-size: 52px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  margin-top:10px;
+  margin-bottom: 15px;   
+}
+#wraper .slider-block p{
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  text-align: center;  
+   
+}
+.slider-block button{
+  font-size: 14px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.643;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #998675;
+  box-shadow:  0px 3px 0px 0px rgba(115, 99, 87, 0.004); 
+  width: 170px;
+  height: 53px;
+  margin: auto;
+  margin-top: 50px;
+  display: block;
+  
+
+}
+
+
+#slider-navigator{
+    width: 100%;
+    margin-top:20px; 
+   
+}
+#slider-nav-list{
+    display: block;
+    text-align: center;
+    width: 110px;
+    margin: 0px auto;
+    
+
+}
+#slider-nav-list li{
+    float: left;
+    text-align: center;
+    margin: 5px;
+    list-style: none;
+    cursor: pointer;
+    background-color: #908f8e;
+    padding: 5px;
+    border-radius: 50%;
+}
+.nav-link-selected{
+    margin: 2px 5px 2px 5px !important;
+    padding: 6px !important;
+    background-color: transparent !important;
+    border: 2px solid #c1b1a0;
+}
+
+
+/*--------------------------------------------------------------------------------------------- Content -----------------------------------------------------------------------------------------*/
+#services-background{
+    background-color: #ffffff;
+}
+/*----------------------------------------------------- Services ------------------------------------------------------*/
+#services{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#services > div{
+    opacity: 0.7;
+}
+#services > div:hover{
+    opacity: 1;
+}
+#services img {
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+}
+#services div:nth-child(2) img{
+    margin-top: 10px;
+}
+#services div:nth-child(3) img{
+    margin-top: 6px;
+}
+#services div:nth-child(4) img{
+    margin-top: 14px;
+}
+#services h2{
+  font-size: 22px;
+  font-family: "Raleway";
+  color: #444444;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center; 
+  margin-bottom: 15px;
+}
+#services p{
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: rgb(140, 140, 140);
+  line-height: 1.714;
+  text-align: center;
+  margin-bottom: 25px;
+  height: 69px;
+  overflow: hidden;
+  
+}
+.center-hr{
+    width: 70px;
+    margin:auto;
+}
+#services hr{
+    width: 70px;
+    border:1px solid #8c8c8c;
+
+}
+
+
+/*-------------------------------------------------------------------- Waxom-advertising -------------------------------------------------------------------*/
+#waxom-advertising{
+    background-color: #fbfaf8;   
+}
+#waxom-advertising-content{
+    padding: 80px 10px 40px 10px;
+    max-width: 810px;
+    margin: auto;
+}
+#waxom-advertising-content h2{
+  font-size: 30px;
+  font-family: "Raleway";
+  color: rgb(85, 85, 85);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 20px;
+
+}
+#waxom-advertising-content p{
+
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(140, 140, 140);
+  line-height: 1.75;
+  text-align: center;
+ 
+}
+#waxom-advertising-image{
+    max-width: 1252px;
+    margin: auto;
+    background-image: url('../Image/Waxom-advertising.png') ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 490px;
+}
+
+
+
+/*----------------------------------------------------- Purchase ------------------------------------------------------*/
+#waxom-advertising-purchase {
+    width: 100%;
+    background-color: #3a2921;
+    padding: 50px 0px 40px 0px;
+}
+#waxom-advertising-purchase div{
+    padding: 0px 10px 0px 10px;
+
+}
+
+
+#waxom-advertising-purchase button {
+  border-radius: 3px;
+  background-color: #998675;
+  box-shadow: 0px 3px 0px 0px #736357;
+  display: block;
+  margin: auto;
+
+  width: 170px;
+  height: 50px;
+  font-size: 14px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.643;
+  text-align: center;
+
+}
+
+#waxom-advertising-purchase h1{
+  font-size: 28px;
+  font-family: "Raleway";
+  color: #ffffff;
+  line-height: 1.2;
+  text-align: left;
+ 
+}
+#waxom-advertising-purchase h1:before{
+  content: "Waxom ";
+  font-size: 28px;
+  font-family: "Raleway";
+  color: #c7b299;
+  line-height: 1.2;
+  text-align: left;
+
+}
+#waxom-advertising-purchase h2{
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: rgb(97, 88, 85);
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+
+
+/*----------------------------------------------------- latest project ------------------------------------------------------*/
+#latest-project{
+  padding: 60px 0px 50px 0px;
+}
+#latest-project h2{  
+  font-size: 30px;
+  font-family: "Raleway";
+  color: rgb(85, 85, 85);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;  
+  margin-bottom: 20px;
+}
+#latest-project h4{
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(140, 140, 140);
+  line-height: 1.75;
+  text-align: center;  
+  max-width: 757px;
+  margin: auto;
+}
+
+
+
+#project-menu{
+  width: 610px;
+  margin: auto; 
+  
+}
+#project-menu li{
+   list-style-type: none;
+   margin: 5px;
+   float: left
+}
+#project-menu li button{
+  display: block;   
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: rgb(140, 140, 140);
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid rgb(235,235,235);  
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 8px 20px 8px 20px;     
+
+}
+
+
+.project-menu-active{
+  background-color: #998675!important;
+  color: #ffffff!important;
+}
+
+/*----------------------------------------------------- latest project examples------------------------------------------------------*/
+#projects-area{
+  padding-top: 70px;
+}
+.examples-bg{  
+  padding: 15px;
+}
+
+.examples{
+  background-color: #ffffff;
+  width: 100%;  
+  
+}
+.examples img{
+  display: block;
+  width: 100%;
+  max-height: 100%;
+}
+#load-more{
+  margin-top:30px; 
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #998675;
+  box-shadow: 0px 3px 0px 0px #736357;
+  width: 170px;
+  height: 50px; 
+  border: 0px;
+
+  font-size: 14px;
+  font-family: "Raleway";
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.643;
+  text-align: center;
+  position: relative;
+  top:40px;
+}
+
+.example-description{
+  height: 100px;
+  width: 100%;
+  background-color: #f8f3e8;
+  padding: 25px 10px 25px 20px;
+  
+}
+.example-description:after{
+  content: '';
+  border: 25px solid transparent;
+  border-bottom: 15px solid #f8f3e8;
+  position: relative;
+  top:-106px;
+}
+.example-description h2{  
+  font-size: 20px;
+  font-family: "Raleway";
+  color: rgb(199, 178, 153);
+  line-height: 1.2;
+  text-align: left; 
+  padding-bottom: 5px;
+}
+.example-description h3{  
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: rgb(209, 209, 209);
+  line-height: 1.429;
+  text-align: left;
+  font-weight: 100;
+}  
+ 
+.examples-bg a:hover .example-description{
+  background-color: #362f2d;
+}
+.examples-bg a:hover .example-description:after{
+  border-bottom-color: #362f2d;
+}
+.examples-bg a:hover .example-description h2{
+  color: rgb(255, 255, 255);
+}
+.examples-bg a:hover .example-description h3{
+  color: rgb(199, 178, 153);
+}
+
+
+
+/*----------------------------------------------------- video presentation------------------------------------------------------*/
+#video-presentation{
+  background-image: url('../Image/videoPresentation.png');
+  background-repeat: no-repeat;
+  background-position: center center;  
+  background-size: cover;
+  height: 1000px;
+  margin-top:100px;
+
+}
+#video-presentation .main-content{
+  padding: 290px 10px 0px 10px;
+
+}
+#video-play{
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0,0.2);
+  
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: auto;
+}
+#video-play img{
+  position: relative;
+  top: 15px;
+  left: 15px;
+}
+#video-presentation .main-content h1{
+  font-size: 30px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 40px;  
+  margin-bottom: 20px;
+}
+#video-presentation .main-content p{
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  line-height: 1.75;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  
+}
+
+
+
+
+
+/*-------------------------------------------------------------------- Footer -----------------------------------------------------------------------*/
+footer{
+  background-color:#111111;  
+  width: 100%;  
+}
+footer .main-content{
+  padding-top: 40px;
+  height: 100px;
+}
+footer .main-content div:nth-child(1){
+  position: relative;
+  float: left;
+
+}
+footer .main-content div:nth-child(1) li:nth-child(1):before{
+  content: "Copyright ";
+  position: relative;
+  top:-3px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  color: rgb(85, 85, 85);
+  line-height: 1.538;
+  text-align: left;
+}
+footer  li{
+  list-style-type: none;
+   margin: 5px;
+   padding-left:10px;
+   float: left;
+   border-left:1px solid #555555;
+   height: 12px;
+}
+footer .main-content div li:nth-child(1){
+  border: none;
+}
+footer .main-content div:nth-child(1) a{
+  position: relative;
+  top:-3px;
+  color: #838383;
+  font-size: 13px;
+  font-family: "Montserrat";
+  line-height: 1.538;
+  text-align: left;
+}
+
+
+
+footer .main-content div:nth-child(2){
+  position: relative;
+  float: right;
+  
+}
+footer .main-content div:nth-child(2) li:nth-child(1):before{
+  content: "Designed by ";
+}
+footer .main-content div:nth-child(2) li:nth-child(2):before{
+  content: "Only on ";
+}
+footer .main-content div:nth-child(2) li:nth-child(1):before,li:nth-child(2):before{
+  position: relative;
+  top:-3px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  line-height: 1.538;
+  text-align: left;
+}
+footer .main-content div:nth-child(2) li:nth-child(1):before,li:nth-child(2):before{
+  color: #555555;
+}
+footer .main-content div:nth-child(2) a{
+  color: #838383;
+  position: relative;
+  top:-3px;
+  font-size: 13px;
+  font-family: "Montserrat";
+  line-height: 1.538;
+  text-align: left;
+}
+
+   
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {  
+  #project-menu{width: 200px;  }
+  #project-menu li button{width: 200px;}
+}
+
+
+@media only screen and (max-width: 800px){
+  footer .main-content{padding-top: 30px;}
+  footer .main-content div:nth-child(1){float: none;display:block;width: 400px;margin: auto;}
+  footer .main-content div:nth-child(2){float: none;display:block;width: 400px;margin: auto;}
+  
+}
+
+@media only screen and (max-width: 1024px) {  
+    #hidden-menu-icon{display: block;}
+    .logo{float: none;width: 200px; margin: auto;}
+    #header-menu{padding: 5px 5px 0px 5px;} 
+  
+    #menu-BG .menu{display: none;}  
+    
+}
+@media only screen and (max-width: 1200px){
+  
+  
+  #header-menu div:nth-child(1){  display: block;}
+  #podkladka{height: 85px;}
+  .logo h1{font-size:24px;}
+  .logo img{height: 40px;}
+
+
+}
+
+@media only screen and (max-width: 500px){
+  footer .main-content{height:200px;}
+  footer  li{border:none;width: 200px;display: block;padding: 5px 0px 5px 0px;}
+  footer .main-content div:nth-child(1){width: 210px;}
+  footer .main-content div:nth-child(2){width: 210px;}
+
+}
+
+ 
